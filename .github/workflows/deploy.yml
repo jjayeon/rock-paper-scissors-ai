@@ -13,6 +13,5 @@ jobs:
       - name: Deploy
         uses: actions/deploy-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           push: true
