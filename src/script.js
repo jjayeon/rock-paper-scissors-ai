@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll('button');
 const resultDiv = document.getElementById('result');
+const userChoiceImg = document.getElementById('user-choice');
+const computerChoiceImg = document.getElementById('computer-choice');
 
 buttons.forEach(button => {
     button.addEventListener('click', (event) => {
@@ -8,6 +10,10 @@ buttons.forEach(button => {
         // Generate computer's random choice (Rock, Paper, Scissors)
         const computerChoices = ['Rock', 'Paper', 'Scissors'];
         const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+        // Update image source based on user and computer choices
+        userChoiceImg.src = `images/${userChoice.toLowerCase()}.png`;
+        computerChoiceImg.src = `images/${computerChoice.toLowerCase()}.png`;
 
         // Determine winner (simple logic for MVP) 
         let winner = "";
