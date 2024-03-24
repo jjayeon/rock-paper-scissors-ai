@@ -1,0 +1,25 @@
+#game-container {
+    display: flex;
+    width: 300px;
+    justify-content: flex-start;
+}
+
+#player-choices, #computer-choice {
+    flex: 1;  /* Makes elements take up equal space */
+}
+
+#player-choices {
+  display: flex;
+  flex-direction: column;  /* Stacks elements vertically */
+  align-items: center;  /* Aligns elements horizontally in center */
+}
+
+#computer-choice {
+    flex: 1;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.choice-image {
+    width: 100px;
+}
